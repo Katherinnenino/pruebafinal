@@ -1,8 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Tweets</h1>
-
-
 <br>
 <%= form_with url: tweets_path, method: :get do |form|%>
 <%= form.text_field :query_text, placeholder: t('username search'), value: params[:query_text]%>

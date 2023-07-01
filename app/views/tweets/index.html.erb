@@ -2,7 +2,7 @@
 
 <h1>Tweets</h1>
 
-<%= link_to "New tweet", new_tweet_path %>
+
 <br>
 <%= form_with url: tweets_path, method: :get do |form|%>
 <%= form.text_field :query_text, placeholder: t('username search'), value: params[:query_text]%>
@@ -15,3 +15,5 @@
     </p>
   <% end %>
 </div>
+<%=raw pagy_nav(@pagy)%>
+<%= link_to "New tweet", new_tweet_path %>

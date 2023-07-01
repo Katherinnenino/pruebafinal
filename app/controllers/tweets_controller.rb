@@ -1,8 +1,6 @@
 class TweetsController < ApplicationController
   include Pagy::Frontend
 
-
-
   
   before_action :set_tweet, only: %i[ show edit update destroy ]
 

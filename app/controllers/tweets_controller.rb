@@ -1,18 +1,16 @@
 class TweetsController < ApplicationController
   include Pagy::Frontend
+  include Pagy::Backend
 
-  
   before_action :set_tweet, only: %i[ show edit update destroy ]
 
   # GET /tweets or /tweets.json
   def index
-    @pagy, @tweets = pagy(Tweet.all)
+    @pagy, @tweets = pagy(Tweet.all, items: 10)
     if params[:query_text].present?
       @tweets = @tweets.search_full_text(params[:query_text])
       end
   end
-
-
   # GET /tweets/1 or /tweets/1.json
   def show
   end

@@ -1,5 +1,7 @@
 
 <h1>Tweets Index</h1><br>
+<%= link_to "Crear un nuevo tweet" , new_tweet_path %>
+<br>
 <h5>Buscar Tweet </h5>
 <p style="color: red">
   <%= notice %>
@@ -17,4 +19,4 @@
     <% end %>
   </div>
 <%=raw pagy_nav(@pagy)%>
-<%= link_to "Crear un nuevo tweet" , new_tweet_path %>
+

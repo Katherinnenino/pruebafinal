@@ -74,3 +74,5 @@ end
 gem "pg_search", "~> 2.3"
 
 gem "pagy", "~> 5.10"
+
+gem "aws-sdk-s3"
